@@ -1,18 +1,15 @@
 engines:
   structure:
     enabled: true
-    channel: java
+    channel: "go-beta"
   duplication:
     enabled: true
-    channel: java
+    channel: go-beta
     config:
       languages:
-        - java
-ratings:
-  paths:
-    - "**.java"
-exclude_paths:
-  - "**.js"
-  - "**.jsx"
-  - "**.rb"
-  - "**.py"
+        go:
+          mass_threshold: 30
+exclude_patterns:
+  - "**/*_test.go"
+  - "**/*_tests.go"
+  - "vendor/"
